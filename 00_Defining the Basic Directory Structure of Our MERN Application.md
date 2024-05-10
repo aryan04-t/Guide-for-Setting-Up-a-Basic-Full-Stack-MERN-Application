@@ -22,7 +22,7 @@
 5. Now go to the root directory of your project and create "package.json" file there for backend. 
     > - __Command:__ ``` npm init ```
     > - Fill all the package.json file details properly 
-    > - Set the ``` "test" ``` script to be ``` "nodemon App.js" ```
+    > - Remove the ``` "test" ``` script and add script named ``` "server" ``` and define the script to be ``` "nodemon Backend/App.js" ```
 
   ## * Note:  
   > --> We're not creating the backend's package.json file inside the "Backend/" directory, we're creating it inside the root directory of our project so that it stays easy for us to deploy our frontend and backend together in the end 
@@ -98,8 +98,8 @@ Date:   Fri May 10 15:12:37 2024 +0530
     - Split your code space and terminal space between the frontend and backend directory for better coding experience 
 
 
-14. For running the backend, run this command inside the terminal which you have opened in the "Backend/" directory: 
-    - __Command:__ ``` npm run test ``` [OR] ``` nodemon App.js ``` 
+14. For running the backend, run this command inside the terminal which you have opened in the root directory: 
+    - __Command:__ ``` npm run server ``` [OR] ``` nodemon Backend/App.js ``` 
 
 
 15. For running the frontend, run this command inside the terminal which you have opened in the "src/" directory of "Frontend/" directory: 
