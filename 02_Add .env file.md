@@ -1,0 +1,1 @@
+# Just add .env file in your project's root directory for defining the environment variables in it. 
