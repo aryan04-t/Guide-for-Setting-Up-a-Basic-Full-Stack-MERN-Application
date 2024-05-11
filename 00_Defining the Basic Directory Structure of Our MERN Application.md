@@ -9,20 +9,21 @@
 
 3. In "Frontend" directory initialize a vite react app using this command: 
     > - __Command:__ ``` npm create vite@latest . ```
-    > - Choose "react" and "javascript" based template for your Frontend 
+    > - Choose "react" and "javascript" based template for your Frontend, or whatever else you like 
 
 
 4. Now just organize the vite react app's directory structure: 
     > - Delete the .gitignore file and "public/" directory 
-    > - Delete default code of "App.jsx" and Remove default .svg images 
+    > - Delete default code of "app.jsx" and your own written sample testing function which returns a 
+      \<h1\> I am working totally fine \</h1\> and Remove default .svg images 
     > - Segregate "css" and "components" into different directories inside the "src/" directory 
-    > - Only keep one main component "Main.jsx" in the "src/" directory 
+    > - Only keep one main component "main.jsx" and one css file "index.css" in the "src/" directory (I prefer camel case for naming my component and css files) 
 
 
 5. Now go to the root directory of your project and create "package.json" file there for backend. 
     > - __Command:__ ``` npm init ```
     > - Fill all the package.json file details properly 
-    > - Remove the ``` "test" ``` script and add script named ``` "server" ``` and define the script to be ``` "nodemon Backend/App.js" ```
+    > - Remove the ``` "test" ``` script and add script named ``` "server" ``` and define the script to be ``` "nodemon Backend/app.js" ```
 
   ## * Note:  
   > --> We're not creating the backend's package.json file inside the "Backend/" directory, we're creating it inside the root directory of our project so that it stays easy for us to deploy our frontend and backend together in the end 
@@ -32,10 +33,10 @@
     - __Command:__ ``` npm i --save-dev nodemon ``` [OR] ``` npm i -D nodemon ```
 
 
-7. Rename the entry point of package.json as "App.js" and create a App.js file in "Backend/" directory 
+7. Rename the entry point of package.json as "Backend/app.js" and create a app.js file in "Backend/" directory 
  
 
-8. Write a basic server code in App.js: 
+8. Write a basic server code in app.js: 
 
 <span style="color: lightgreen"> @ My Sample Code: </span>
 
@@ -99,7 +100,18 @@ Date:   Fri May 10 15:12:37 2024 +0530
 
 
 14. For running the backend, run this command inside the terminal which you have opened in the root directory: 
-    - __Command:__ ``` npm run server ``` [OR] ``` nodemon Backend/App.js ``` 
+    - __Command:__ ``` npm run server ``` [OR] ``` nodemon Backend/app.js ``` 
+    - Once your server is up and running write this test get call, go to the test/ path in the server's url and check whether your server is working fine or not. 
+
+<span style="color: lightgreen"> @ Sample Test Get Call: </span> 
+
+```
+app.get('/test', (req, res) => {
+
+    res.send(`<h1> I am working totally fine </h1>`)
+
+});
+```
 
 
 15. For running the frontend, run this command inside the terminal which you have opened in the "src/" directory of "Frontend/" directory: 
